@@ -1,28 +1,47 @@
 .nav {
-    display: flex;
-    justify-content: start;
-    background-color: #3c424f;
-  }
-  
-  .nav i {
-    font-size: 36px;
-    margin-bottom: 5px;
-  }
-  
-  .nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0;
-    padding: 15px;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    color: white;
-  }
-  
-  .nav a:hover {
-    background-color: green;
-  }
-  
+  display: flex;
+  justify-content: flex-start;
+  background-color: #3c424f;
+}
+
+.nav i {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+/* Styling for navigation links */
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:not(:first-child) {
+  border-left: 1px solid white;
+}
+
+.nav a:hover {
+  background-color: green;
+}
+
+.nav a:active {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* Styling for active link */
+.nav a.active {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* Underline only the text within the active link */
+.nav a.active span {
+  text-decoration: underline;
+}
