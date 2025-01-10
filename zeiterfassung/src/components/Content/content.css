@@ -1,40 +1,139 @@
-/* General Card Styling */
-.card-calendar-card,
-.card-profile-card,
-.card-time-card,
-.card-projects-card,
-.card-tasks-card,
-.card-time-accounts-card,
-.card-vacation-card,
-.card-terminal-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px;
-  max-width: 400px;
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.card :hover {
-  transform: translateY(-5px);
-}
-
-/* Headings */
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #234479;
-}
-
-/* Paragraph Styling */
-.card p {
-  font-size: 1rem;
-  color: #555;
-  margin: 5px 0;
-}
-
+/* Grid Layout for All Cards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+  
+  /* General Card Styling */
+  .card-profile-card,
+  .card-tasks-card,
+  .card-vacation-card,
+  .card-time-card,
+  .card-terminal-card,
+  .card-calendar-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Hover Effect for All Cards */
+  .card-profile-card:hover,
+  .card-tasks-card:hover,
+  .card-vacation-card:hover,
+  .card-time-card:hover,
+  .card-terminal-card:hover,
+  .card-calendar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading Styling */
+  .card-profile-card h2,
+  .card-tasks-card h2,
+  .card-vacation-card h2,
+  .card-time-card h2,
+  .card-terminal-card h2,
+  .card-calendar-card h2 {
+    font-size: 1.8rem;
+    color: #234479;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph Styling */
+  .card-profile-card p,
+  .card-tasks-card p,
+  .card-vacation-card p,
+  .card-time-card p,
+  .card-terminal-card p,
+  .card-calendar-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Button Styling for All Cards */
+  .card-profile-card button,
+  .card-tasks-card button,
+  .card-vacation-card button,
+  .card-time-card button,
+  .card-terminal-card button,
+  .card-calendar-card button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #357ae8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-profile-card button i,
+  .card-tasks-card button i,
+  .card-vacation-card button i,
+  .card-time-card button i,
+  .card-terminal-card button i,
+  .card-calendar-card button i {
+    margin-right: 8px;
+  }
+  
+  .card-profile-card button:hover,
+  .card-tasks-card button:hover,
+  .card-vacation-card button:hover,
+  .card-time-card button:hover,
+  .card-terminal-card button:hover,
+  .card-calendar-card button:hover {
+    background-color: #234479;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .dashboard-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .card-profile-card h2,
+    .card-tasks-card h2,
+    .card-vacation-card h2,
+    .card-time-card h2,
+    .card-terminal-card h2,
+    .card-calendar-card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .card-profile-card button,
+    .card-tasks-card button,
+    .card-vacation-card button,
+    .card-time-card button,
+    .card-terminal-card button,
+    .card-calendar-card button {
+      font-size: 0.9rem;
+    }
+  }
+  
 /* React Calendar Styles */
 .calendar .react-calendar {
     width: 100%;
@@ -119,23 +218,3 @@ button:focus {
     outline-offset: 2px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .card {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    .calendar .react-calendar {
-        max-width: 100%;
-    }
-
-    .calendar .react-calendar__tile {
-        padding: 8px;
-        font-size: 0.9rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-    }
-}
