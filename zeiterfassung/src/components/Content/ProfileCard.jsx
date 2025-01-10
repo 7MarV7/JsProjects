@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 import { FaCar, FaClock, FaCamera, FaCheck, FaEdit } from 'react-icons/fa';
 
-function ProfileCard({ name, email, department, phone, imageUrl, office, employeeNumber }) {
+function ProfileCard({
+  name = 'Unbekannt',
+  email = 'Keine E-Mail',
+  department = 'Unbekannt',
+  phone = 'Keine Telefonnummer',
+  imageUrl = 'https://via.placeholder.com/150',  // Platzhalterbild
+  office = 'Unbekannt',
+  employeeNumber = 'Keine Nummer',
+}) {
   const handleEditProfile = () => {
     alert("Profil bearbeiten wird bald verfügbar sein.");
   };
@@ -57,6 +65,7 @@ function ProfileCard({ name, email, department, phone, imageUrl, office, employe
   );
 }
 
+// PropTypes-Validierung
 ProfileCard.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,

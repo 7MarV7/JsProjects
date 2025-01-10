@@ -1,24 +1,44 @@
+/* Grundlegendes Styling für den Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #3c424f;
-  color: white;
-}
-.header h1 {
-  margin: 0;
-}
-.header-actions button {
-  background-color: #4285f4;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  margin-left: 10px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.header-actions button:hover {
-  background-color: #357ae8;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
+/* Styling für den Header-Titel */
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Styling für den Sprachauswahlbereich */
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.language-selector {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px; /* Setzt die Sprachauswahl nach unten */
+  right: 20px; /* Setzt sie rechts */
+}
+
+.language-selector button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.language-selector .flag {
+  width: 25px;
+  height: 15px;
+  object-fit: cover;
+}

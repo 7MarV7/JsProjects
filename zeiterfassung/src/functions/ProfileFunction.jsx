@@ -1,6 +1,6 @@
-import ProfileCard from "../Content/ProfileCard";
 import Header from "../Header/header";
 import Navigation from "../Navigation/navigation";
+import ProfileCard from "../Content/ProfileCard";
 import TasksCard from "../Content/TasksCard";
 import VacationCard from "../Content/VacationCard";
 import TimeAccountsCard from "../Content/TimeAccountsCard";
@@ -18,13 +18,12 @@ function App() {
         <Navigation />
       </div>
       <div className="dashboard-grid">
-        {/* Übergabe der Props an die ProfileCard */}
         <ProfileCard 
           name="John Doe"
           email="john.doe@example.com"
           department="Engineering"
           phone="123-456-7890"
-          imageUrl="https://via.placeholder.com/150"  // Beispielbild-URL
+          imageUrl="path/to/image.jpg" // Stelle sicher, dass dies der richtige Pfad zum Bild ist
           office="Main Office"
           employeeNumber="12345"
         />
