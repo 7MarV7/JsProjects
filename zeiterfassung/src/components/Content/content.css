@@ -114,6 +114,10 @@
   transform: scale(1.05);
 }
 
+.card-calendar-card button {
+  margin-top: 8px;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
   .dashboard-grid {
