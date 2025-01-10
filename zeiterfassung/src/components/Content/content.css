@@ -113,7 +113,7 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    position: relative; /* Change from absolute to prevent overlap */
+    position: relative; 
     margin-top: 20px;
     font-size: 1rem;
     transition: background-color 0.3s ease;

@@ -10,11 +10,16 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
+    <div className="App">
       <Header />
       <Navigation />
-      <main className="content">
-        <ProfileCard />
+      <main>
+        <ProfileCard
+          name="Max Mustermann"
+          email="max.mustermann@example.com"
+          department="IT-Abteilung"
+          phone="+49 123 456789"
+        />
         <TasksCard />
         <VacationCard />
         <TerminalCard />
