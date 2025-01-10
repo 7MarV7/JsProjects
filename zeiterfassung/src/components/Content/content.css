@@ -1,10 +1,12 @@
 /* General Card Styling */
-.card-vacation-card,
-.card-time-card,
-.card-tasks-card,
-.card-terminal-card,
 .card-calendar-card,
-.card-profile-card {
+.card-profile-card,
+.card-time-card,
+.card-projects-card,
+.card-tasks-card,
+.card-time-accounts-card,
+.card-vacation-card,
+.card-terminal-card {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,34 +17,19 @@
   transition: transform 0.3s ease;
 }
 
-.card-vacation-card:hover,
-.card-time-card:hover,
-.card-tasks-card:hover,
-.card-terminal-card:hover,
-.card-calendar-card:hover,
-.card-profile-card:hover {
+.card :hover {
   transform: translateY(-5px);
 }
 
 /* Headings */
-.card-vacation-card h2,
-.card-time-card h2,
-.card-tasks-card h2,
-.card-terminal-card h2,
-.card-calendar-card h2,
-.card-profile-card h2 {
+.card h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #234479;
 }
 
 /* Paragraph Styling */
-.card-vacation-card p,
-.card-time-card p,
-.card-tasks-card p,
-.card-terminal-card p,
-.card-calendar-card p,
-.card-profile-card p {
+.card p {
   font-size: 1rem;
   color: #555;
   margin: 5px 0;
