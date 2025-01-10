@@ -2,10 +2,10 @@ import Header from "../Header/header";
 import Navigation from "../Navigation/navigation";
 import TerminalCard from "../Content/TerminalCard";
 import TimeAccountsCard from "../Content/TimeAccountsCard";
-import CalendarCard from "../Content/CalendarCard";
+import CalendarCard from "../Content/CalendarCard";  
 import ProfileCard from "../Content/ProfileCard";
 import TasksCard from "../Content/TasksCard";
-import VacationCard from "../Content/VacationCard"; 
+import VacationCard from "../Content/VacationCard";
 import "./App.css";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <main className="content">
         <ProfileCard />
         <TasksCard />
-        <VacationCard /> 
+        <VacationCard />
         <TerminalCard />
         <TimeAccountsCard />
         <CalendarCard />

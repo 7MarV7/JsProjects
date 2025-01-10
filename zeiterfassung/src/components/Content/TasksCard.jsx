@@ -1,13 +1,38 @@
+import { useState } from "react";
 import "./Content.css";
 
-function TasksCard() {
+// TasksCard Component
+export function TasksCard() {
+  const [tasks, setTasks] = useState([
+    "Projektbericht abschließen",
+    "Meeting um 14:00 Uhr",
+    "Code-Review durchführen",
+  ]);
+
+  const markTaskAsDone = (index) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  };
+
   return (
-    <div className="card tasks-card">
+    <div className="card-tasks-card">
       <h2>Meine Aufgaben</h2>
-      <div className="task-list">Liste der Aufgaben</div>
-      <button><i className="ri-navigation-line"></i>Aufgabenübersicht öffnen</button>
+      <div className="task-list">
+        {tasks.length > 0 ? (
+          <ul>
+            {tasks.map((task, index) => (
+              <li key={index}>
+                {task} <button onClick={() => markTaskAsDone(index)}>Erledigt</button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>Keine offenen Aufgaben.</p>
+        )}
+      </div>
+      <button onClick={() => alert("Aufgabenübersicht wird geöffnet")}> 
+        <i className="ri-navigation-line"></i>Aufgabenübersicht öffnen
+      </button>
     </div>
   );
 }
-
-export default TasksCard;

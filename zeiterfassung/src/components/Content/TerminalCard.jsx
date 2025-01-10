@@ -1,14 +1,28 @@
+import { useState } from "react";
 import "./Content.css";
 
-function TerminalCard() {
+// TerminalCard Component
+export function TerminalCard() {
+  const [status, setStatus] = useState("Anwesend");
+  const today = new Date().toLocaleDateString("de-DE", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  const toggleStatus = () => {
+    setStatus((prevStatus) => (prevStatus === "Anwesend" ? "Abwesend" : "Anwesend"));
+  };
+
   return (
-    <div className="card terminal-card">
+    <div className="card-terminal-card">
       <h2>Terminal</h2>
-      <p>Datum: Di, 7. Januar 2025</p>
-      <p>Status: <span>Anwesend</span></p>
-      <button><i className="ri-navigation-line"></i>Status ändern</button>
+      <p>Datum: {today}</p>
+      <p>Status: <strong>{status}</strong></p>
+      <button onClick={toggleStatus}>
+        <i className="ri-navigation-line"></i>Status ändern
+      </button>
     </div>
   );
 }
-
-export default TerminalCard;
