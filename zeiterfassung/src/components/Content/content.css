@@ -1,0 +1,138 @@
+/* General Card Styling */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    max-width: 600px; /* Limit card width for better visibility */
+    margin: 20px auto; /* Center the card in the viewport */
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Calendar Container */
+.calendar {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: visible; /* Ensure full calendar visibility */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* React Calendar Styles */
+.calendar .react-calendar {
+    width: 100%;
+    max-width: 500px; /* Limit width for responsive design */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+}
+
+/* Month View Layout */
+.calendar .react-calendar__month-view {
+    display: grid;
+    grid-template-rows: auto auto; /* Adjust rows for headers and days */
+    gap: 10px; /* Add spacing between rows */
+}
+
+/* Calendar Tile Styling */
+.calendar .react-calendar__tile {
+    text-align: center;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Tile Hover Effects */
+.calendar .react-calendar__tile:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Current Day Highlight */
+.calendar .react-calendar__tile--now {
+    background: #357ae8;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Active Day Highlight */
+.calendar .react-calendar__tile--active {
+    background: #ffbf00;
+    color: white;
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+/* Button Styling */
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #234479;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative; /* Change from absolute to prevent overlap */
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+button:focus {
+    outline: 2px solid #84c0ff;
+    outline-offset: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .card {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .calendar .react-calendar {
+        max-width: 100%;
+    }
+
+    .calendar .react-calendar__tile {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
