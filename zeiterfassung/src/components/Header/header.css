@@ -1,4 +1,4 @@
-/* Grundlegendes Styling für den Header */
+/* Styling for the header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -7,38 +7,77 @@
   background-color: #f4f4f4;
   border-bottom: 1px solid #ddd;
   position: relative;
+  width: 100%;
 }
 
-/* Styling für den Header-Titel */
+/* Styling for the header title (h1) */
 .header h1 {
   font-size: 1.8rem;
   margin: 0;
+  color: #333;  /* Text color for the title */
 }
 
-/* Styling für den Sprachauswahlbereich */
+/* Container for header actions (like buttons) */
 .header-actions {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
+/* Language selector container */
 .language-selector {
-  display: flex;
-  gap: 10px;
+  display: flex;           
+  gap: 5px;                
   position: absolute;
-  bottom: 10px; /* Setzt die Sprachauswahl nach unten */
-  right: 20px; /* Setzt sie rechts */
+  bottom: 10px;            
+  right: 1.5rem;             
+  z-index: 10;             
+  align-items: center;     
 }
 
+/* Styling for each language selection button */
 .language-selector button {
   background: none;
   border: none;
   cursor: pointer;
   padding: 5px;
+  display: flex;          
+  justify-content: center;  
+  align-items: center;    
 }
 
+/* Styling for the flag images */
 .language-selector .flag {
-  width: 25px;
-  height: 15px;
-  object-fit: cover;
+  width: 40px;  
+  height: 40px; 
+  object-fit: contain;
+}
+
+/* Add hover effect for the buttons */
+.language-selector button:hover {
+  opacity: 0.8; /* Slightly dim the button when hovered */
+}
+
+/* Styling for language buttons */
+.languageButton {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add vertical line separator */
+.language-selector .separator {
+  display: flex;
+  margin-top: 19px;
+  width: 1px;
+  height: 40px;
+  background-color: #000000;
+}
+
+.languageButton:hover {
+  background-color: #357ae8;
 }

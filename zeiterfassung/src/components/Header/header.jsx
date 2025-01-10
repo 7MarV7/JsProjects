@@ -1,11 +1,11 @@
 import { useState } from "react";
+import './header.css';
 
 function Header() {
   const [language, setLanguage] = useState("de");
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
-    // Hier kannst du die Logik zum Ändern der Sprache implementieren
     console.log(`Sprache geändert auf: ${lang === "de" ? "Deutsch" : "Englisch"}`);
   };
 
@@ -14,11 +14,12 @@ function Header() {
       <h1>{language === "de" ? "Zeiterfassungssoftware" : "Time Tracking Software"}</h1>
       <div className="header-actions">
         <div className="language-selector">
-          <button onClick={() => handleLanguageChange("de")}>
-            <img src="../zeiterfassung/src/img/germany.png" alt="Deutsch" className="flag" />
+          <button className="languageButton" onClick={() => handleLanguageChange("de")} aria-label="Switch to German">
+            <img src="/images/germany.png" alt="Deutsch" className="flag" />
           </button>
-          <button onClick={() => handleLanguageChange("en")}>
-            <img src="../zeiterfassung/src/img/uk.png" alt="English" className="flag" />
+          <div className="separator"></div>
+          <button className="languageButton" onClick={() => handleLanguageChange("en")} aria-label="Switch to English">
+            <img src="/images/united-states.png" alt="English" className="flag" />
           </button>
         </div>
       </div>
