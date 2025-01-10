@@ -6,7 +6,7 @@ function ProfileCard({
   email = 'Keine E-Mail',
   department = 'Unbekannt',
   phone = 'Keine Telefonnummer',
-  imageUrl = 'https://via.placeholder.com/150',  // Platzhalterbild
+  imageUrl = 'https://via.placeholder.com/150',  
   office = 'Unbekannt',
   employeeNumber = 'Keine Nummer',
 }) {

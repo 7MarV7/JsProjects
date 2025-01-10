@@ -23,7 +23,7 @@ function App() {
           email="john.doe@example.com"
           department="Engineering"
           phone="123-456-7890"
-          imageUrl="path/to/image.jpg" // Stelle sicher, dass dies der richtige Pfad zum Bild ist
+          imageUrl="/images/istockphoto-1495088043-612x612.jpg" 
           office="Main Office"
           employeeNumber="12345"
         />
