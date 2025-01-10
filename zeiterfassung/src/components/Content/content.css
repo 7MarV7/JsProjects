@@ -1,265 +1,347 @@
 /* Grid Layout for All Cards */
 .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* General Card Styling */
+.card-profile-card,
+.card-tasks-card,
+.card-vacation-card,
+.card-terminal-card,
+.card-time-card,
+.card-calendar-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;       /* Flexibel mit maximaler Breite */
+  max-width: 350px;   /* Maximale Breite der Karte */
+  margin: 0 auto;     /* Zentriert die Karte */
+}
+
+/* Equal height for all cards */
+.dashboard-grid > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Hover Effect for All Cards */
+.card-profile-card:hover,
+.card-tasks-card:hover,
+.card-vacation-card:hover,
+.card-terminal-card:hover,
+.card-time-card:hover,
+.card-calendar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+.card-profile-card h2,
+.card-tasks-card h2,
+.card-vacation-card h2,
+.card-terminal-card h2,
+.card-time-card h2,
+.card-calendar-card h2 {
+  font-size: 1.8rem;
+  color: #234479;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.card-profile-card p,
+.card-tasks-card p,
+.card-vacation-card p,
+.card-terminal-card p,
+.card-time-card p,
+.card-calendar-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Button Styling for All Cards */
+.card-profile-card button,
+.card-tasks-card button,
+.card-vacation-card button,
+.card-terminal-card button,
+.card-time-card button,
+.card-calendar-card button {
+  margin-top: auto;
+  width: 100%;
+  background-color: #357ae8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-profile-card button i,
+.card-tasks-card button i,
+.card-vacation-card button i,
+.card-terminal-card button i,
+.card-time-card button i,
+.card-calendar-card button i {
+  margin-right: 8px;
+}
+
+.card-profile-card button:hover,
+.card-tasks-card button:hover,
+.card-vacation-card button:hover,
+.card-terminal-card button:hover,
+.card-time-card button:hover,
+.card-calendar-card button:hover {
+  background-color: #234479;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .dashboard-grid {
+      grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
   }
-  
-  /* General Card Styling */
-  .card-profile-card,
-  .card-tasks-card,
-  .card-vacation-card,
-  .card-terminal-card,
-  .card-time-card,
-  .card-calendar-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .dashboard-grid {
+      grid-template-columns: 1fr; /* Eine Spalte */
   }
-  
-  /* Equal height for all cards */
-  .dashboard-grid > div {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  /* Hover Effect for All Cards */
-  .card-profile-card:hover,
-  .card-tasks-card:hover,
-  .card-vacation-card:hover,
-  .card-terminal-card:hover,
-  .card-time-card:hover,
-  .card-calendar-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Heading Styling */
+
   .card-profile-card h2,
   .card-tasks-card h2,
   .card-vacation-card h2,
   .card-terminal-card h2,
   .card-time-card h2,
   .card-calendar-card h2 {
-    font-size: 1.8rem;
-    color: #234479;
-    margin-bottom: 10px;
+      font-size: 1.5rem;
   }
-  
-  /* Paragraph Styling */
-  .card-profile-card p,
-  .card-tasks-card p,
-  .card-vacation-card p,
-  .card-terminal-card p,
-  .card-time-card p,
-  .card-calendar-card p {
-    font-size: 1rem;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  /* Button Styling for All Cards */
+
   .card-profile-card button,
   .card-tasks-card button,
   .card-vacation-card button,
   .card-terminal-card button,
   .card-time-card button,
   .card-calendar-card button {
-    margin-top: auto;
-    width: 100%;
-    background-color: #357ae8;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card-profile-card button i,
-  .card-tasks-card button i,
-  .card-vacation-card button i,
-  .card-terminal-card button i,
-  .card-time-card button i,
-  .card-calendar-card button i {
-    margin-right: 8px;
-  }
-  
-  .card-profile-card button:hover,
-  .card-tasks-card button:hover,
-  .card-vacation-card button:hover,
-  .card-terminal-card button:hover,
-  .card-time-card button:hover,
-  .card-calendar-card button:hover {
-    background-color: #234479;
-    transform: scale(1.05);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 900px) {
-    .dashboard-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .dashboard-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .card-profile-card h2,
-    .card-tasks-card h2,
-    .card-vacation-card h2,
-    .card-terminal-card h2,
-    .card-time-card h2,
-    .card-calendar-card h2 {
-      font-size: 1.5rem;
-    }
-  
-    .card-profile-card button,
-    .card-tasks-card button,
-    .card-vacation-card button,
-    .card-terminal-card button,
-    .card-time-card button,
-    .card-calendar-card button {
       font-size: 0.9rem;
-    }
   }
+}
 
-  .profile-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px; 
-    margin-top: 10px;
-  }
-  
-  .profile-links a {
-    padding: 10px;
-    background-color: #f0f0f0;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .profile-links a:hover {
-    background-color: #e0e0e0;
-  }
+/* Profilkarte Styling */
+.card-profile-card {
+  width: 100%; /* Flexibel mit maximaler Breite */
+  max-width: 350px; /* Maximale Breite der Karte */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
 
-  
-  /* Swap Cards */
-  .dashboard-grid > .card-terminal-card {
-    order: 4;
-  }
-  
-  .dashboard-grid > .card-time-card {
-    order: 5;
-  }
-  
-  /* Move Calendar to the Far Right */
-  .dashboard-grid > .card-calendar-card {
-    order: 6;
-  }
-  
-  
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  background-color: pink;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.profile-info p {
+  margin: 5px 0 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.profile-details strong {
+  display: block;
+  color: gray;
+  font-size: 12px;
+}
+
+.profile-details p {
+  margin: 5px 0 0;
+  font-weight: bold;
+}
+
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.profile-links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.profile-links a:hover {
+  background-color: #e0e0e0;
+}
+
+.no-tabstop {
+  outline: none; /* Verhindert den Tabstopp */
+}
+
+.blue-text {
+  color: #007bff;
+}
+
+.edit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.edit-button:hover {
+  text-decoration: underline;
+}
+
+/* Swap Cards */
+.dashboard-grid > .card-terminal-card {
+  order: 4;
+}
+
+.dashboard-grid > .card-time-card {
+  order: 5;
+}
+
+/* Move Calendar to the Far Right */
+.dashboard-grid > .card-calendar-card {
+  order: 6;
+}
+
 /* React Calendar Styles */
 .calendar .react-calendar {
-    width: 100%;
-    max-width: 500px; /* Limit width for responsive design */
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5em;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 500px; /* Limit width for responsive design */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5em;
+  box-sizing: border-box;
 }
 
 /* Month View Layout */
 .calendar .react-calendar__month-view {
-    display: grid;
-    grid-template-rows: auto auto; /* Adjust rows for headers and days */
-    gap: 10px; /* Add spacing between rows */
+  display: grid;
+  grid-template-rows: auto auto; /* Adjust rows for headers and days */
+  gap: 10px; /* Add spacing between rows */
 }
 
 /* Calendar Tile Styling */
 .calendar .react-calendar__tile {
-    text-align: center;
-    padding: 10px;
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Tile Hover Effects */
 .calendar .react-calendar__tile:hover {
-    background-color: #e6f7ff;
-    transform: scale(1.05);
-    cursor: pointer;
+  background-color: #e6f7ff;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* Current Day Highlight */
 .calendar .react-calendar__tile--now {
-    background: #357ae8;
-    color: white;
-    border-radius: 50%;
+  background: #357ae8;
+  color: white;
+  border-radius: 50%;
 }
 
 /* Active Day Highlight */
 .calendar .react-calendar__tile--active {
-    background: #ffbf00;
-    color: white;
-    border-radius: 50%;
-    transform: scale(1.1);
+  background: #ffbf00;
+  color: white;
+  border-radius: 50%;
+  transform: scale(1.1);
 }
 
 /* Button Styling */
 button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    background-color: #234479;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    position: relative; 
-    margin-top: 20px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #234479;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative; 
+  margin-top: 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 button i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 button:hover {
-    background-color: #357ae8;
+  background-color: #357ae8;
 }
 
 button:focus {
-    outline: 2px solid #84c0ff;
-    outline-offset: 2px;
+  outline: 2px solid #84c0ff;
+  outline-offset: 2px;
 }
-

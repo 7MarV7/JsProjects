@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaCar, FaClock, FaCamera, FaCheck, FaEdit } from 'react-icons/fa';
 
-function ProfileCard({ name, email, department, phone, imageUrl }) {
+function ProfileCard({ name, email, department, phone, imageUrl, office, employeeNumber }) {
   const handleEditProfile = () => {
     alert("Profil bearbeiten wird bald verfügbar sein.");
   };
@@ -25,6 +25,14 @@ function ProfileCard({ name, email, department, phone, imageUrl }) {
           <strong>Telefon</strong>
           <p>{phone}</p>
         </div>
+        <div>
+          <strong>Abteilung</strong>
+          <p>{office}</p>
+        </div>
+        <div>
+          <strong>Nummer</strong>
+          <p>{employeeNumber}</p>
+        </div>
       </div>
 
       <div className="profile-links">
@@ -37,7 +45,7 @@ function ProfileCard({ name, email, department, phone, imageUrl }) {
         <a href="#">
           <FaCamera /> <span className="blue-text">Urlaubsantrag</span>
         </a>
-        <a href="#">
+        <a href="#" className="no-tabstop">
           <FaCheck /> Meine Bewertungen
         </a>
       </div>
@@ -55,6 +63,8 @@ ProfileCard.propTypes = {
   department: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
+  office: PropTypes.string.isRequired,
+  employeeNumber: PropTypes.string.isRequired,
 };
 
 export default ProfileCard;
