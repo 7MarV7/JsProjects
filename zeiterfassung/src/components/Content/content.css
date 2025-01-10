@@ -270,6 +270,17 @@
   box-sizing: border-box;
 }
 
+.card-tasks-card li{
+  padding: 15px;
+}
+
+/* Grey out weekends */
+.calendar .react-calendar__month-view__days__day:nth-child(7n+6),
+.calendar .react-calendar__month-view__days__day:nth-child(7n+7) {
+  color: #ccc;
+  pointer-events: none;
+}
+
 /* Month View Layout */
 .calendar .react-calendar__month-view {
   display: grid;
@@ -308,6 +319,10 @@
   color: white;
   border-radius: 50%;
   transform: scale(1.1);
+}
+
+.calendar .react-calendar__navigation {
+ background-color: #357ae8;
 }
 
 /* Button Styling */
