@@ -8,7 +8,7 @@ function TerminalCard() {
   const toggleStatus = () => {
     setStatus((prevStatus) => {
       const newStatus = prevStatus === "Anwesend" ? "Abwesend" : "Anwesend"; // Toggle status between "Present" and "Absent"
-      alert(`Status changed to: ${newStatus}`); // Show an alert with the new status
+      alert(`Status geändert auf : ${newStatus}`); // Show an alert with the new status
       return newStatus; // Return the new status
     });
   };
@@ -21,7 +21,7 @@ function TerminalCard() {
 
       {/* Button to change the status */}
       <button onClick={toggleStatus}>
-        <i className="ri-navigation-line"></i>Change Status
+        <i className="ri-navigation-line"></i>Status ändern
       </button>
     </div>
   );
