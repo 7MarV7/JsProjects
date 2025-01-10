@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Content.css";
 
 // VacationCard Component
-export function VacationCard() {
+export default function VacationCard() {
   const [vacationData, setVacationData] = useState({
     total: 30,
     taken: 15,

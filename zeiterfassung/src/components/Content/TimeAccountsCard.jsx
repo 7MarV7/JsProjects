@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./Content.css";
 
 // TimeAccountsCard Component
-export function TimeAccountsCard() {
-  const [balance, setBalance] = useState(0); // Balance in hours
+export default function TimeAccountsCard() {
+  const [balance, setBalance] = useState(0);
 
   const handleOpenTimeOverview = () => {
     alert("Übersicht erfasste Zeiten wird geöffnet.");

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Content.css";
 
 // TerminalCard Component
-export function TerminalCard() {
+export default function TerminalCard() {
   const [status, setStatus] = useState("Anwesend");
   const today = new Date().toLocaleDateString("de-DE", {
     weekday: "long",

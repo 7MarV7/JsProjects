@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import "./Content.css";
 
 // ProfileCard Component
-export function ProfileCard({ name, email, department, phone }) {
+export default function ProfileCard({ name, email, department, phone }) {
   const handleEditProfile = () => {
     alert("Profil bearbeiten wird bald verfügbar sein.");
   };
@@ -25,7 +26,7 @@ export function ProfileCard({ name, email, department, phone }) {
   );
 }
 
-// PropTypes validation
+/* PropTypes validation */
 ProfileCard.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,

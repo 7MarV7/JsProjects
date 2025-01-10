@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Content.css";
 
 // TasksCard Component
-export function TasksCard() {
+export default function TasksCard() {
   const [tasks, setTasks] = useState([
     "Projektbericht abschließen",
     "Meeting um 14:00 Uhr",
