@@ -43,5 +43,5 @@
 
 /* Underline only the text within the active link */
 .nav a.active span {
-  text-decoration: underline;
+  text-decoration: none;
 }
