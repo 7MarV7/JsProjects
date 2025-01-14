@@ -80,7 +80,8 @@
 .card-terminal-card button,
 .card-time-card button,
 .card-calendar-card button {
-  margin-top: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 100%;
   background-color: #357ae8;
   color: #fff;
@@ -149,9 +150,6 @@
   }
 }
 
-.card-time-card button {
-  margin-top: 8px;
-}
 
 /* Profilkarte Styling */
 .card-profile-card {
