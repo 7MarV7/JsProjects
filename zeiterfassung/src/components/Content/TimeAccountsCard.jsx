@@ -18,7 +18,7 @@ export default function TimeAccountsCard() {
     labels: ["Urlaubsanspruch", "Urlaub genommen", "Urlaub geplant", "Resturlaub"],
     datasets: [
       {
-        data: [20, 5, 3, 12], // Beispielwerte
+        data: [20, 5, 3, 12], 
         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
         hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"]
       }
