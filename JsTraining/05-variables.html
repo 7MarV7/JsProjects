@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+
+<h1>Cart Quantity</h1>
+
+<button onclick="console.log(cart)">Show Quantity</button>
+<button onclick="updateCart(1)">Add to Cart</button>
+<button onclick="updateCart(2)">+2</button>
+<button onclick="updateCart(3)">+3</button>
+<button onclick="updateCart(0, true)">Reset Cart</button>
+
+<script>
+    let cart = 0;
+    const updateCart = (n, reset = false) => console.log('Cart Quantity:', cart = reset ? 0 : cart + n);
+</script>
+
+</body>
+</html>

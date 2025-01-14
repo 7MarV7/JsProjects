@@ -26,9 +26,9 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 100%;       /* Flexibel mit maximaler Breite */
-  max-width: 350px;   /* Maximale Breite der Karte */
-  margin: 0 auto;     /* Zentriert die Karte */
+  width: 100%;       
+  max-width: 350px;   
+  margin: 0 auto;     
 }
 
 /* Equal height for all cards */
@@ -151,8 +151,8 @@
 
 /* Profilkarte Styling */
 .card-profile-card {
-  width: 100%; /* Flexibel mit maximaler Breite */
-  max-width: 350px; /* Maximale Breite der Karte */
+  width: 100%; 
+  max-width: 350px; 
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -248,7 +248,7 @@
   text-decoration: underline;
 }
 
-/* Swap Cards */
+
 .dashboard-grid > .card-terminal-card {
   order: 4;
 }
@@ -257,7 +257,7 @@
   order: 5;
 }
 
-/* Move Calendar to the Far Right */
+
 .dashboard-grid > .card-calendar-card {
   order: 6;
 }
@@ -265,7 +265,7 @@
 /* React Calendar Styles */
 .calendar .react-calendar {
   width: 100%;
-  max-width: 500px; /* Limit width for responsive design */
+  max-width: 500px; 
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -288,8 +288,8 @@
 /* Month View Layout */
 .calendar .react-calendar__month-view {
   display: grid;
-  grid-template-rows: auto auto; /* Adjust rows for headers and days */
-  gap: 10px; /* Add spacing between rows */
+  grid-template-rows: auto auto; 
+  gap: 10px; 
 }
 
 /* Calendar Tile Styling */

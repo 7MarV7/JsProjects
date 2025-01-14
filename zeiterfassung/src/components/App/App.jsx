@@ -18,13 +18,14 @@ function App() {
         <Navigation />
       </div>
       <div className="dashboard-grid">
-        {/* Übergabe der Props an die ProfileCard */}
+
+        {/*Props to Profilecard */}
         <ProfileCard 
           name="John Doe"
           email="john.doe@example.com"
           department="Engineering"
           phone="123-456-7890"
-          imageUrl="https://via.placeholder.com/150"  // Beispielbild-URL
+          imageUrl="https://via.placeholder.com/150"  
           office="Main Office"
           employeeNumber="12345"
         />
