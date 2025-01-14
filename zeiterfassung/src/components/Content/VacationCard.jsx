@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 function VacationCard() {
   const [vacationData] = useState({
-    total: 20,
+    total: 25,
     taken: 15,
     planned: 5,
   });
