@@ -3,10 +3,9 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import "./Content.css";
 
-// Register the required components
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// TimeAccountsCard Component
 export default function TimeAccountsCard() {
   const [balance] = useState(0);
 
@@ -30,10 +29,11 @@ export default function TimeAccountsCard() {
       <h2>Zeitkonten</h2>
       <p>Saldo: {balance}</p>
       <p>(Über-/Fehlstunden)</p>
+      <Doughnut data={data} />
       <button onClick={handleOpenTimeOverview}>
         <i className="ri-navigation-line"></i>Übersicht erfasste Zeiten
       </button>
-      <Doughnut data={data} />
+      
     </div>
   );
 }

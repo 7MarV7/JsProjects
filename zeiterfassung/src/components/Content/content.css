@@ -149,6 +149,10 @@
   }
 }
 
+.card-time-card button {
+  margin-top: 8px;
+}
+
 /* Profilkarte Styling */
 .card-profile-card {
   width: 100%; 
@@ -343,7 +347,7 @@ button {
   border-radius: 3px;
   cursor: pointer;
   position: relative; 
-  margin-top: 20px;
+  margin-top: 1rem;
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
