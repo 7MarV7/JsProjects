@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FaCar, FaClock, FaCamera, FaCheck, FaEdit } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
 
 function ProfileCard({
   name = 'Unbekannt',
@@ -34,38 +34,22 @@ function ProfileCard({
           <p>{phone}</p>
         </div>
         <div>
-          <strong>Abteilung</strong>
+          <strong>Büro</strong>
           <p>{office}</p>
         </div>
         <div>
-          <strong>Nummer</strong>
+          <strong>Mitarbeiternummer</strong>
           <p>{employeeNumber}</p>
         </div>
       </div>
 
-      <div className="profile-links">
-        <a href="#">
-          <FaCar /> Reiseantrag
-        </a>
-        <a href="#">
-          <FaClock /> <span className="blue-text">Meine Zeiten</span>
-        </a>
-        <a href="#">
-          <FaCamera /> <span className="blue-text">Urlaubsantrag</span>
-        </a>
-        <a href="#" className="no-tabstop">
-          <FaCheck /> Meine Bewertungen
-        </a>
-      </div>
-
-      <button onClick={handleEditProfile} className="edit-button">
+      <button onClick={handleEditProfile}>
         <FaEdit /> Profil bearbeiten
       </button>
     </div>
   );
 }
 
-// PropTypes-Validierung
 ProfileCard.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,

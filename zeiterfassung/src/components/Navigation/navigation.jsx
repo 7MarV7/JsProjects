@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./navigation.css";
+import { NavLink } from "react-router-dom";
+import "./Navigation.css"; 
 
 function Navigation() {
   const [activeLink, setActiveLink] = useState("Startseite");
@@ -10,55 +11,34 @@ function Navigation() {
 
   return (
     <nav className="nav">
-      <a
-        href="#"
+      <NavLink
+        to="/startseite"
         className={activeLink === "Startseite" ? "active" : ""}
         onClick={() => handleLinkClick("Startseite")}
       >
         <i className="ri-home-line"></i> <span>Startseite</span>
-      </a>
-      <a
-        href="#"
+      </NavLink>
+      <NavLink
+        to="/mitarbeiter"
         className={activeLink === "Mitarbeiter" ? "active" : ""}
         onClick={() => handleLinkClick("Mitarbeiter")}
       >
         <i className="ri-user-line"></i> <span>Mitarbeiter</span>
-      </a>
-      <a
-        href="#"
+      </NavLink>
+      <NavLink
+        to="/zeit"
         className={activeLink === "Zeit" ? "active" : ""}
         onClick={() => handleLinkClick("Zeit")}
       >
         <i className="ri-time-line"></i> <span>Zeit</span>
-      </a>
-      <a
-        href="#"
+      </NavLink>
+      <NavLink
+        to="/anwesenheitsdisplay"
         className={activeLink === "Anwesenheitsdisplay" ? "active" : ""}
         onClick={() => handleLinkClick("Anwesenheitsdisplay")}
       >
-        <i className="ri-layout-grid-line"></i> <span>Anwesenheitsdisplay</span>
-      </a>
-      <a
-        href="#"
-        className={activeLink === "Kalender" ? "active" : ""}
-        onClick={() => handleLinkClick("Kalender")}
-      >
-        <i className="ri-calendar-line"></i> <span>Kalender</span>
-      </a>
-      <a
-        href="#"
-        className={activeLink === "Ampelkonto" ? "active" : ""}
-        onClick={() => handleLinkClick("Ampelkonto")}
-      >
-        <i className="ri-lightbulb-line"></i> <span>Ampelkonto</span>
-      </a>
-      <a
-        href="#"
-        className={activeLink === "Zeiterfassung" ? "active" : ""}
-        onClick={() => handleLinkClick("Zeiterfassung")}
-      >
-        <i className="ri-file-list-line"></i> <span>Zeiterfassung</span>
-      </a>
+        <i className="ri-display-line"></i> <span>Anwesenheitsdisplay</span>
+      </NavLink>
     </nav>
   );
 }
