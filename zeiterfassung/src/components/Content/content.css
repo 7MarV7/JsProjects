@@ -298,14 +298,13 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.384);
 }
 
 .profile-actions button {
-  width: auto; /* Make buttons narrower */
+  width: auto; 
   padding: 10px;
   font-size: var(--text-size);
-  background-color: var(--button-bg-color);
-  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -318,4 +317,8 @@
 .profile-actions button:hover {
   background-color: var(--button-hover-bg);
   transform: scale(1.05);
+}
+
+.profile-actions button svg {
+  margin-right: 8px; /* Add space between icon and text */
 }
