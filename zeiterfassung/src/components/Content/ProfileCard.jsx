@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck } from "react-icons/fa";
+import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit } from "react-icons/fa";
 import "./Content.css"; 
 
 function ProfileCard({
@@ -7,7 +7,7 @@ function ProfileCard({
   email = "john.doe@example.com",
   department = "Engineering",
   phone = "123-456-7890",
-  imageUrl = "/images/istockphoto-1495088043-612x612.jpg", 
+  imageUrlNew = "/images/istockphoto-1495088043-612x612.jpg", 
   office = "Main Office",
   employeeNumber = "12345",
 }) {
@@ -18,7 +18,7 @@ function ProfileCard({
   return (
     <div className="card-profile-card">
       <div className="profile-header">
-        <img src={imageUrl} alt="Profilbild" className="profile-image" />
+        <img src={imageUrlNew} alt="Profilbild" className="profile-image" />
         <div className="profile-info">
           <h2>{name}</h2>
           <p>{email}</p>
@@ -45,17 +45,23 @@ function ProfileCard({
       </div>
 
       <div className="profile-actions">
-        <button onClick={() => handleActionClick("Urlaub beantragen")}>
-          <FaUmbrellaBeach /> Urlaub beantragen
+        <button onClick={() => handleActionClick("Urlaubsantrag")}>
+          <FaUmbrellaBeach /> Urlaubsantrag
         </button>
         <button onClick={() => handleActionClick("Überstunden eintragen")}>
           <FaClock /> Überstunden eintragen
         </button>
-        <button onClick={() => handleActionClick("Dienstreise beantragen")}>
-          <FaPlane /> Dienstreise beantragen
+        <button onClick={() => handleActionClick("Reiseantrag")}>
+          <FaPlane /> Reiseantrag
         </button>
-        <button onClick={() => handleActionClick("Aufgabe abschließen")}>
-          <FaCheck /> Aufgabe abschließen
+        <button onClick={() => handleActionClick("Fortbildungen")}>
+          <FaCheck /> Fortbildungen
+        </button>
+      </div>
+      
+      <div className="profile-button">
+        <button className="profile-button" onClick={() => handleActionClick("Profil bearbeiten")}>
+          <FaEdit /> Profil bearbeiten
         </button>
       </div>
     </div>
@@ -67,7 +73,7 @@ ProfileCard.propTypes = {
   email: PropTypes.string,
   department: PropTypes.string,
   phone: PropTypes.string,
-  imageUrl: PropTypes.string,
+  imageUrlNew: PropTypes.string,
   office: PropTypes.string,
   employeeNumber: PropTypes.string,
 };
