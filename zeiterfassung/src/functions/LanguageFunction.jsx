@@ -1,6 +1,26 @@
-import { useContext } from "react";
-import { LanguageContext } from "../../functions/LanguageContext";
-import './header.css';
+import { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
+import { LanguageContext } from './LanguageContext';
+
+
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState("de");
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    console.log(`Sprache geändert auf: ${lang === "de" ? "Deutsch" : "Englisch"}`);
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, handleLanguageChange }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+LanguageProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 function Header() {
   const { language, handleLanguageChange } = useContext(LanguageContext);
