@@ -73,7 +73,7 @@
 
 .language-selector .separator {
   display: flex;
-  margin-top: 19px;
+  margin-top: 1px;
   width: 1px;
   height: 40px;
   background-color: #000000;

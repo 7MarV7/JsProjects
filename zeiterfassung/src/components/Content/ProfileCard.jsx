@@ -45,16 +45,16 @@ function ProfileCard({
       </div>
 
       <div className="profile-actions">
-        <button onClick={() => handleActionClick("Urlaubsantrag")}>
+        <button  onClick={() => handleActionClick("Urlaubsantrag")}>
           <FaUmbrellaBeach /> Urlaubsantrag
         </button>
-        <button onClick={() => handleActionClick("Überstunden eintragen")}>
+        <button  onClick={() => handleActionClick("Überstunden eintragen")}>
           <FaClock /> Überstunden eintragen
         </button>
-        <button onClick={() => handleActionClick("Reiseantrag")}>
+        <button  onClick={() => handleActionClick("Reiseantrag")}>
           <FaPlane /> Reiseantrag
         </button>
-        <button onClick={() => handleActionClick("Fortbildungen")}>
+        <button  onClick={() => handleActionClick("Fortbildungen")}>
           <FaCheck /> Fortbildungen
         </button>
       </div>
