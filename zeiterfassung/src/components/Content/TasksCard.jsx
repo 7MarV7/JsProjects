@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Components Css/general.css";
+import "./Styles/general.css";
 
 // TasksCard Component
 export default function TasksCard() {

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit } from "react-icons/fa";
-import "./Components Css/general.css";
+import "./Styles/general.css";
 
 function ProfileCard({
   name = "John Doe",

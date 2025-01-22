@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./Components Css/general.css";
+import "./Styles/general.css";
 
 export default function CalendarCard() {
   const [selectedDate, setSelectedDate] = useState(new Date());

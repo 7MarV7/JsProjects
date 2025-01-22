@@ -1,4 +1,5 @@
 
+import "./Styles/general.css";
 
 function ActivityTrafficLight() {
   return (

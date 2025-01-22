@@ -8,6 +8,6 @@
  ==================================================================================================================================*/
 
 /* Imports */
-@import url('./components/Content/Components%20Css/calendar.css');
-@import url('./components/Content/Components%20Css/profile.css');
-@import url('./components/Content/Components%20Css/cards.css');
+@import url('./calendar.css');	
+@import url('./cards.css');
+@import url('profile.css');
