@@ -35,7 +35,7 @@ Row: | Name:
 
 
  /*Imports */
-  /*========>Root Variables<========*/
+/*========>Root Variables<========*/
   :root {
     --primary-color: #357ae8;
     --secondary-color: #234479;
@@ -54,7 +54,7 @@ Row: | Name:
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --hover-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
-
+ 
 /* Profile Card Styling */
 
   /* ====>profileAction Buttons<==== */
@@ -94,18 +94,11 @@ Row: | Name:
     background-color: #04a004; 
     transform: scale(0.95); 
   }
-  
-   /* ====>profile-Action, profile-button svg & img<==== */
 
-  .profile-actions button svg,
-  .profile-button button svg {
+   /* ====>svg & img<==== */
+
+  .profile-actions button svg {
     margin-right: 10px;
-    color: white;
-  }
-
-  .profile-actions button svg,
-  .profile-button button svg {
-    margin-right: 10px; 
     color: white;
   }
 
@@ -120,5 +113,4 @@ Row: | Name:
     object-fit: cover;
     margin-right: 20px;
   }
-
 
