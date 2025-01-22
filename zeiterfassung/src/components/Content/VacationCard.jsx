@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Styles/general.css";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { LanguageContext } from "../../functions/LanguageContext";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function VacationCard() {
+  const { language } = useContext(LanguageContext);
   const [vacationData] = useState({
     total: 25,
     taken: 15,
@@ -26,19 +28,19 @@ function VacationCard() {
   };
 
   const handleOpenVacationOverview = () => {
-    alert("Urlaubsübersicht wird geöffnet.");
+    alert(language === "de" ? "Urlaubsübersicht wird geöffnet." : "Vacation overview is opening.");
   };
 
   return (
     <div className="card-vacation-card">
-      <h2>Urlaubsanspruch</h2>
-      <p>Gesamt: {vacationData.total} Tage</p>
-      <p>Genommen: {vacationData.taken} Tage</p>
-      <p>Geplant: {vacationData.planned} Tage</p>
-      <p>Resturlaub: {remaining} Tage</p>
+      <h2>{language === "de" ? "Urlaubsanspruch" : "Vacation Entitlement"}</h2>
+      <p>{language === "de" ? "Gesamt" : "Total"}: {vacationData.total} {language === "de" ? "Tage" : "days"}</p>
+      <p>{language === "de" ? "Genommen" : "Taken"}: {vacationData.taken} {language === "de" ? "Tage" : "days"}</p>
+      <p>{language === "de" ? "Geplant" : "Planned"}: {vacationData.planned} {language === "de" ? "Tage" : "days"}</p>
+      <p>{language === "de" ? "Resturlaub" : "Remaining"}: {remaining} {language === "de" ? "Tage" : "days"}</p>
       <Doughnut data={data} />
       <button onClick={handleOpenVacationOverview}>
-        <i className="ri-navigation-line"></i>Urlaubsübersicht öffnen
+        <i className="ri-navigation-line"></i>{language === "de" ? "Urlaubsübersicht öffnen" : "Open Vacation Overview"}
       </button>
     </div>
   );

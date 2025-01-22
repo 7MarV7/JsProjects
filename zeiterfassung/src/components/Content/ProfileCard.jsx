@@ -1,8 +1,10 @@
-import PropTypes from "prop-types";
+import { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit } from "react-icons/fa";
+import { LanguageContext } from "../../functions/LanguageContext";
 import "./Styles/general.css";
 
-
+// ActionButton-Komponente für Wiederverwendbarkeit
 function ActionButton({ icon, label, onClick }) {
   return (
     <button className="profile-action-button" onClick={onClick}>
@@ -17,7 +19,7 @@ ActionButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-
+// ProfileCard-Komponente
 function ProfileCard({
   name = "John Doe",
   email = "john.doe@example.com",
@@ -27,11 +29,13 @@ function ProfileCard({
   office = "Main Office",
   employeeNumber = "12345",
 }) {
+  const { language } = useContext(LanguageContext);
+
   const actions = [
-    { icon: <FaUmbrellaBeach />, label: "Urlaubsantrag", action: "Urlaubsantrag" },
-    { icon: <FaClock />, label: "Überstunden eintragen", action: "Überstunden eintragen" },
-    { icon: <FaPlane />, label: "Reiseantrag", action: "Reiseantrag" },
-    { icon: <FaCheck />, label: "Fortbildungen", action: "Fortbildungen" },
+    { icon: <FaUmbrellaBeach />, label: language === 'de' ? "Urlaubsantrag" : "Vacation Request", action: "Urlaubsantrag" },
+    { icon: <FaClock />, label: language === 'de' ? "Überstunden eintragen" : "Log Overtime", action: "Überstunden eintragen" },
+    { icon: <FaPlane />, label: language === 'de' ? "Reiseantrag" : "Travel Request", action: "Reiseantrag" },
+    { icon: <FaCheck />, label: language === 'de' ? "Fortbildungen" : "Trainings", action: "Fortbildungen" },
   ];
 
   const handleActionClick = (action) => {
@@ -54,19 +58,19 @@ function ProfileCard({
 
       <div className="profile-details">
         <div className="detail-item">
-          <strong>Fachbereich</strong>
+          <strong>{language === 'en' ? 'Department' : 'Fachbereich'}</strong>
           <p>{department}</p>
         </div>
         <div className="detail-item">
-          <strong>Telefon</strong>
+          <strong>{language === 'en' ? 'Phone' : 'Telefon'}</strong>
           <p>{phone}</p>
         </div>
         <div className="detail-item">
-          <strong>Office</strong>
+          <strong>{language === 'en' ? 'Office' : 'Büro'}</strong>
           <p>{office}</p>
         </div>
         <div className="detail-item">
-          <strong>Employee Number</strong>
+          <strong>{language === 'en' ? 'Employee Number' : 'Mitarbeiternummer'}</strong>
           <p>{employeeNumber}</p>
         </div>
       </div>
@@ -84,7 +88,7 @@ function ProfileCard({
 
       <div className="profile-edit-button">
         <button onClick={() => handleActionClick("Profil bearbeiten")}>
-          <FaEdit /> Profil bearbeiten
+          <FaEdit /> {language === 'en' ? 'Edit Profile' : 'Profil bearbeiten'}
         </button>
       </div>
     </div>
