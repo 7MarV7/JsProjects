@@ -41,7 +41,7 @@ export default function CalendarCard() {
       <div className="calendar">
         <Calendar value={selectedDate} onChange={setSelectedDate} />
       </div>
-      <button className="calendar-open-button" onClick={handleOpenCalendar}>
+      <button className="open-calendar" onClick={handleOpenCalendar}>
         <i className="ri-navigation-line"></i> {currentTexts.openCalendar}
       </button>
     </div>
