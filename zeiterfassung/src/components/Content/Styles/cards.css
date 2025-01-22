@@ -32,16 +32,8 @@ Row: | Name:
      !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
 */      
 
-
  /*Imports */
-
-
-
-
-
-
-
-
+ 
 /*========>Root Variables<========*/
 :root {
   --primary-color: #357ae8;
@@ -80,6 +72,13 @@ Row: | Name:
   align-items: stretch;
 }
 
+/*========>Equal height for all cards<========*/
+.dashboard-grid > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 /*========>Responsive Design<========*/
 @media (max-width: 900px) {
   .dashboard-grid {
@@ -91,6 +90,7 @@ Row: | Name:
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
+}
 
 /*========>General Styles<========*/
 
@@ -113,13 +113,6 @@ Row: | Name:
   width: 100%;
   max-width: 350px;
   margin: 0 auto;
-}
-
-/*========>Equal height for all cards<========*/
-.dashboard-grid > div {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 /*========>Hover and Focus Effects<========*/
@@ -249,5 +242,4 @@ Row: | Name:
 .card-calendar-card button,
 .profile-button button {
   font-size: 0.9rem;
-}
 }

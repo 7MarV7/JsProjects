@@ -28,7 +28,8 @@ Row: | Name:
      !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
 */
 
- /*========>Imports<======== */
+ /*Imports*/
+
   /*========>Root Variables<========*/
   :root {
     --primary-color: #357ae8;
