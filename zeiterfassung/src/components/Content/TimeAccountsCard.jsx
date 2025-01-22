@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Content.css";
+import "./Components Css/general.css";
 
 function TimeAccountsCard() {
   const [balance] = useState(0);

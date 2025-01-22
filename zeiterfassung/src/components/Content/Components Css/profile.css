@@ -1,0 +1,124 @@
+/*================================================================================================================================
+    File Name: profile.css
+        Creator: Marvin S.
+        Date: 2021-09-30
+        Project: Profile Card Styling
+        Description:  This is the CSS file for the Profile Card component. It contains the styling for the profile card and its components.
+        last update: 2021-10-01
+ ==================================================================================================================================*/
+
+/* Index 
+
+Row: | Name:
+
+     | Imports
+     | .profile-actions Buttons
+     | .profile-Action, profile-button svg & img                                   
+     | 
+     |
+     | 
+     | 
+     |
+     | 
+     | 
+     | 
+     | 
+     | 
+     |
+     | 
+     | 
+     |
+     | 
+     |
+     !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
+*/      
+
+
+ /*Imports */
+  /*========>Root Variables<========*/
+  :root {
+    --primary-color: #357ae8;
+    --secondary-color: #234479;
+    --text-color: #555;
+    --card-bg-color: #ffffff;
+    --hover-bg-color: #e6f7ff;
+    --active-bg-color: #ffbf00;
+    --heading-size: 1.8rem;
+    --text-size: 1rem;
+    --border-radius: 10px;
+    --gap: 20px;
+    --max-width: 1200px;
+    --button-bg-color: #357ae8;
+    --button-hover-bg: #234479;
+    --button-focus-outline: #84c0ff;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --hover-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+/* Profile Card Styling */
+
+  /* ====>profileAction Buttons<==== */
+
+  .profile-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .profile-actions button {
+    background-color: #006400; 
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-actions button:hover {
+    background-color: #05ad05;
+    transform: scale(1.05);
+  }
+  
+  .profile-actions button:focus {
+    background-color: #05ad05;
+    transform: scale(1.20);
+  }
+  
+  .profile-actions button:active {
+    background-color: #04a004; 
+    transform: scale(0.95); 
+  }
+  
+   /* ====>profile-Action, profile-button svg & img<==== */
+
+  .profile-actions button svg,
+  .profile-button button svg {
+    margin-right: 10px;
+    color: white;
+  }
+
+  .profile-actions button svg,
+  .profile-button button svg {
+    margin-right: 10px; 
+    color: white;
+  }
+
+  .action-item svg {
+    font-size: 18px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+
