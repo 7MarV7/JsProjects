@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit, FaUserEdit } from "react-icons/fa";
+import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit} from "react-icons/fa";
 import { LanguageContext } from "../../functions/LanguageContext";
 import "./Styles/general.css";
 
