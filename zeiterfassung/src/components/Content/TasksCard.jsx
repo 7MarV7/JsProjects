@@ -1,36 +1,39 @@
 import { useState, useContext } from "react";
-import "./Styles/general.css";
 import { LanguageContext } from "../../functions/LanguageContext";
+import "./Styles/general.css";
+
+/*=============>Insert Database later its only a example<=============*/
 
 // TasksCard Component
 export default function TasksCard() {
   const { language } = useContext(LanguageContext);
 
-  // Define text content based on the current language
   const texts = {
     en: {
-      title: "My Tasks",
+      myTasks: "My Tasks",
       noTasks: "No open tasks.",
-      doneButton: "Done",
-      overviewButton: "Open task overview",
-      alert: "Task overview will be opened"
+      openTasksOverview: "Open Tasks Overview",
+      tasks: [
+        "Complete project report",
+        "Meeting at 2:00 PM",
+        "Conduct code review",
+      ],
     },
     de: {
-      title: "Meine Aufgaben",
+      myTasks: "Meine Aufgaben",
       noTasks: "Keine offenen Aufgaben.",
-      doneButton: "Erledigt",
-      overviewButton: "Aufgabenübersicht öffnen",
-      alert: "Aufgabenübersicht wird geöffnet"
-    }
+      openTasksOverview: "Aufgabenübersicht öffnen",
+      tasks: [
+        "Projektbericht abschließen",
+        "Meeting um 14:00 Uhr",
+        "Code-Review durchführen",
+      ],
+    },
   };
-
+/* ================================================================= */
   const currentTexts = texts[language] || texts.en;
 
-  const [tasks, setTasks] = useState([
-    "Projektbericht abschließen",
-    "Meeting um 14:00 Uhr",
-    "Code-Review durchführen",
-  ]);
+  const [tasks, setTasks] = useState(currentTexts.tasks);
 
   const markTaskAsDone = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
@@ -39,13 +42,13 @@ export default function TasksCard() {
 
   return (
     <div className="card-tasks-card">
-      <h2>{currentTexts.title}</h2>
+      <h2>{currentTexts.myTasks}</h2>
       <div className="task-list">
         {tasks.length > 0 ? (
           <ul>
             {tasks.map((task, index) => (
               <li key={index}>
-                {task} <button onClick={() => markTaskAsDone(index)}>{currentTexts.doneButton}</button>
+                {task} <button onClick={() => markTaskAsDone(index)}>Erledigt</button>
               </li>
             ))}
           </ul>
@@ -53,8 +56,8 @@ export default function TasksCard() {
           <p>{currentTexts.noTasks}</p>
         )}
       </div>
-      <button onClick={() => alert(currentTexts.alert)}>
-        <i className="ri-navigation-line"></i>{currentTexts.overviewButton}
+      <button onClick={() => alert(currentTexts.openTasksOverview)}>
+        <i className="ri-navigation-line"></i> {currentTexts.openTasksOverview}
       </button>
     </div>
   );

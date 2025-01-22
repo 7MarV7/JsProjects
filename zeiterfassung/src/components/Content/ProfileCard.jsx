@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit } from "react-icons/fa";
+import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit, FaUserEdit } from "react-icons/fa";
 import { LanguageContext } from "../../functions/LanguageContext";
 import "./Styles/general.css";
 
@@ -31,15 +31,37 @@ function ProfileCard({
 }) {
   const { language } = useContext(LanguageContext);
 
+  const texts = {
+    en: {
+      actionAlert: "will be available soon.",
+      vacationRequest: "Vacation Request",
+      logOvertime: "Log Overtime",
+      travelRequest: "Travel Request",
+      trainings: "Trainings",
+      editProfile: "Edit Profile",
+    },
+    de: {
+      actionAlert: "wird bald verfügbar sein.",
+      vacationRequest: "Urlaubsantrag",
+      logOvertime: "Überstunden eintragen",
+      travelRequest: "Reiseantrag",
+      trainings: "Fortbildungen",
+      editProfile: "Profil bearbeiten",
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en;
+
   const actions = [
-    { icon: <FaUmbrellaBeach />, label: language === 'de' ? "Urlaubsantrag" : "Vacation Request", action: "Urlaubsantrag" },
-    { icon: <FaClock />, label: language === 'de' ? "Überstunden eintragen" : "Log Overtime", action: "Überstunden eintragen" },
-    { icon: <FaPlane />, label: language === 'de' ? "Reiseantrag" : "Travel Request", action: "Reiseantrag" },
-    { icon: <FaCheck />, label: language === 'de' ? "Fortbildungen" : "Trainings", action: "Fortbildungen" },
+    { icon: <FaUmbrellaBeach />, label: currentTexts.vacationRequest, action: "vacationRequest" },
+    { icon: <FaClock />, label: currentTexts.logOvertime, action: "logOvertime" },
+    { icon: <FaPlane />, label: currentTexts.travelRequest, action: "travelRequest" },
+    { icon: <FaCheck />, label: currentTexts.trainings, action: "trainings" },
+    { icon: <FaUserEdit />, label: currentTexts.editProfile, action: "editProfile" },
   ];
 
   const handleActionClick = (action) => {
-    alert(`${action} wird bald verfügbar sein.`);
+    alert(`${currentTexts[action]} ${currentTexts.actionAlert}`);
   };
 
   return (
@@ -86,8 +108,8 @@ function ProfileCard({
         ))}
       </div>
 
-      <div className="profile-edit-button">
-        <button onClick={() => handleActionClick("Profil bearbeiten")}>
+      <div className="profile-edit">
+        <button onClick={() => handleActionClick("editProfile")}>
           <FaEdit /> {language === 'en' ? 'Edit Profile' : 'Profil bearbeiten'}
         </button>
       </div>

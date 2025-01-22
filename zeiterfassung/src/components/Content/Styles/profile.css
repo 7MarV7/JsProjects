@@ -67,29 +67,27 @@
   transform: scale(1.05);
 }
 
-.profile-edit-button {
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-}
-
-.profile-edit-button button {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
+.profile-edit button {
   font-size: 0.9rem;
-  color: blue;
+  background-color: var(--button-bg-color);
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.profile-edit-button button:hover {
+.profile-edit button:hover {
   transform: scale(1.1);
 }
 
-.profile-edit-button button svg {
+.profile-edit button svg {
   margin-right: 0.5rem;
 }
 
