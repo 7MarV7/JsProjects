@@ -1,93 +1,100 @@
-/*================================================================================================================================
-    File Name: profile.css
-        Creator: Marvin S.
-        Date: 2021-09-30
-        Project: Profile Card Styling
-        Description:  This is the CSS file for the Profile Card component. It contains the styling for the profile card and its components.
-        last update: 2021-10-01
- ==================================================================================================================================*/
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
 
-/* Index 
+.profile-image {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
 
-Row: | Name:
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
 
-     | Imports
-     | .profile-actions Buttons
-     | .profile-Action, profile-button svg & img                                   
-     | 
-     |
-     | 
-     | 
-     |
-     | 
-     | 
-     | 
-     | 
-     | 
-     |
-     | 
-     | 
-     |
-     | 
-     |
-     !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
-*/      
+.profile-info p {
+  margin: 0;
+  color: gray;
+}
 
-/* Profile Card Styling */
+.profile-details {
+  padding: 1rem;
+}
 
-  /* ====>.profile-actions Buttons<==== */
+.detail-item {
+  margin-bottom: 0.5rem;
+}
 
+.detail-item strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.profile-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 1rem; /* Space between items */
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.profile-action-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: gray;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.profile-action-button:hover {
+  color: blue;
+  transform: scale(1.05);
+}
+
+.profile-edit-button {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.profile-edit-button button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: blue;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-edit-button button:hover {
+  transform: scale(1.1);
+}
+
+.profile-edit-button button svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 600px) {
   .profile-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
+    grid-template-columns: 1fr; 
   }
-
-  .profile-actions button {
-    background-color: var(--button-bg-color); 
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .profile-actions button:hover {
-    background-color: var(--button-hover-bg); 
-    transform: scale(1.05);
-  }
-  
-  .profile-actions button:focus {
-    background-color: var(--button-hover-bg);
-    transform: scale(1.20);
-  }
-  
-  .profile-actions button:active {
-    transform: scale(0.95); 
-  }
-
-   /* ====>svg & img<==== */
-
-  .profile-actions button svg {
-    margin-right: 10px;
-    color: white;
-  }
-
-  .action-item svg {
-    font-size: 18px;
-  }
-
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-
+}

@@ -2,15 +2,38 @@ import PropTypes from "prop-types";
 import { FaPlane, FaClock, FaUmbrellaBeach, FaCheck, FaEdit } from "react-icons/fa";
 import "./Styles/general.css";
 
+
+function ActionButton({ icon, label, onClick }) {
+  return (
+    <button className="profile-action-button" onClick={onClick}>
+      {icon} {label}
+    </button>
+  );
+}
+
+ActionButton.propTypes = {
+  icon: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+
 function ProfileCard({
   name = "John Doe",
   email = "john.doe@example.com",
   department = "Engineering",
   phone = "123-456-7890",
-  imageUrlNew = "/images/istockphoto-1495088043-612x612.jpg", 
+  imageUrlNew = "/images/istockphoto-1495088043-612x612.jpg",
   office = "Main Office",
   employeeNumber = "12345",
 }) {
+  const actions = [
+    { icon: <FaUmbrellaBeach />, label: "Urlaubsantrag", action: "Urlaubsantrag" },
+    { icon: <FaClock />, label: "Überstunden eintragen", action: "Überstunden eintragen" },
+    { icon: <FaPlane />, label: "Reiseantrag", action: "Reiseantrag" },
+    { icon: <FaCheck />, label: "Fortbildungen", action: "Fortbildungen" },
+  ];
+
   const handleActionClick = (action) => {
     alert(`${action} wird bald verfügbar sein.`);
   };
@@ -18,7 +41,11 @@ function ProfileCard({
   return (
     <div className="card-profile-card">
       <div className="profile-header">
-        <img src={imageUrlNew} alt="Profilbild" className="profile-image" />
+        <img
+          src={imageUrlNew || "/images/default-profile.jpg"}
+          alt="Profilbild"
+          className="profile-image"
+        />
         <div className="profile-info">
           <h2>{name}</h2>
           <p>{email}</p>
@@ -45,20 +72,16 @@ function ProfileCard({
       </div>
 
       <div className="profile-actions">
-        <button  onClick={() => handleActionClick("Urlaubsantrag")}>
-          <FaUmbrellaBeach /> Urlaubsantrag
-        </button>
-        <button  onClick={() => handleActionClick("Überstunden eintragen")}>
-          <FaClock /> Überstunden eintragen
-        </button>
-        <button  onClick={() => handleActionClick("Reiseantrag")}>
-          <FaPlane /> Reiseantrag
-        </button>
-        <button  onClick={() => handleActionClick("Fortbildungen")}>
-          <FaCheck /> Fortbildungen
-        </button>
+        {actions.map((item, index) => (
+          <ActionButton
+            key={index}
+            icon={item.icon}
+            label={item.label}
+            onClick={() => handleActionClick(item.action)}
+          />
+        ))}
       </div>
-      
+
       <div className="profile-edit-button">
         <button onClick={() => handleActionClick("Profil bearbeiten")}>
           <FaEdit /> Profil bearbeiten
