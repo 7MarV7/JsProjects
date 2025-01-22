@@ -57,7 +57,6 @@ function ProfileCard({
     { icon: <FaClock />, label: currentTexts.logOvertime, action: "logOvertime" },
     { icon: <FaPlane />, label: currentTexts.travelRequest, action: "travelRequest" },
     { icon: <FaCheck />, label: currentTexts.trainings, action: "trainings" },
-    { icon: <FaUserEdit />, label: currentTexts.editProfile, action: "editProfile" },
   ];
 
   const handleActionClick = (action) => {
