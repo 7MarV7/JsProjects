@@ -59,8 +59,8 @@ function ProfileCard({
         </button>
       </div>
       
-      <div className="profile-button">
-        <button className="profile-button" onClick={() => handleActionClick("Profil bearbeiten")}>
+      <div className="profile-edit-button">
+        <button onClick={() => handleActionClick("Profil bearbeiten")}>
           <FaEdit /> Profil bearbeiten
         </button>
       </div>

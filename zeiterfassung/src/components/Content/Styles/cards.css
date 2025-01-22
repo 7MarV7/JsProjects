@@ -32,6 +32,27 @@ Row: | Name:
      !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
 */      
 
+ /*Imports */
+/*========>Root Variables<========*/
+:root {
+  --primary-color: #357ae8;
+  --secondary-color: #234479;
+  --text-color: #555;
+  --card-bg-color: #ffffff;
+  --hover-bg-color: #e6f7ff;
+  --active-bg-color: #ffbf00;
+  --heading-size: 1.8rem;
+  --text-size: 1rem;
+  --border-radius: 10px;
+  --gap: 20px;
+  --max-width: 1200px;
+  --button-bg-color: #357ae8;
+  --button-hover-bg: #234479;
+  --button-focus-outline: #84c0ff;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --hover-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 /*========>Utility Classes<========*/
 .flex-center {
   display: flex;
@@ -49,20 +70,6 @@ Row: | Name:
   margin: 0 auto;
   align-items: stretch;
 }
-
-/*========>Equal height for all cards<========*/
-.dashboard-grid > div {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* .some-selector {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
- */
 
 /*========>Responsive Design<========*/
 @media (max-width: 900px) {
@@ -118,7 +125,6 @@ Row: | Name:
   outline: none;
 }
 
-.card-profile-card button:hover,
 .card-tasks-card button:hover,
 .card-vacation-card button:hover,
 .card-terminal-card button:hover,
@@ -160,7 +166,7 @@ Row: | Name:
 }
 
 /*========>Button Styling for All Cards<========*/
-.card-profile-card button,
+.profile-edit-button button,
 .card-tasks-card button,
 .card-vacation-card button,
 .card-terminal-card button,
@@ -178,7 +184,7 @@ Row: | Name:
   align-items: center;
 }
 
-.card-profile-card button:hover,
+
 .card-tasks-card button:hover,
 .card-vacation-card button:hover,
 .card-terminal-card button:hover,
@@ -188,7 +194,7 @@ Row: | Name:
   transform: scale(1.05);
 }
 
-.card-profile-card button:focus,
+
 .card-tasks-card button:focus,
 .card-vacation-card button:focus,
 .card-terminal-card button:focus,
@@ -198,7 +204,7 @@ Row: | Name:
   transform: scale(1.20);
 }
 
-.card-profile-card button:active,
+
 .card-tasks-card button:active,
 .card-vacation-card button:active,
 .card-terminal-card button:active,
@@ -216,12 +222,3 @@ Row: | Name:
   font-size: 1.5rem;
 }
 
-.card-profile-card button,
-.card-tasks-card button,
-.card-vacation-card button,
-.card-terminal-card button,
-.card-time-card button,
-.card-calendar-card button,
-.profile-button button {
-  font-size: 0.9rem;
-}
