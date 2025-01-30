@@ -1,11 +1,38 @@
-import { useState } from "react";
-import "./Content.css";
+import { useContext, useState } from "react";
+import "./Styles/general.css";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { LanguageContext } from "../../functions/LanguageContext";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function VacationCard() {
+  const { language } = useContext(LanguageContext);
+
+  const texts = {
+    en: {
+      vacationEntitlement: "Vacation Entitlement",
+      vacationTaken: "Vacation Taken",
+      vacationPlanned: "Vacation Planned",
+      remainingVacation: "Remaining Vacation",
+    },
+    de: {
+      vacationEntitlement: "Urlaubsanspruch",
+      vacationTaken: "Urlaub genommen",
+      vacationPlanned: "Urlaub geplant",
+      remainingVacation: "Resturlaub",
+    },
+  };
+
+  const currentTexts = texts[language] || texts.en;
+
+  const labels = [
+    currentTexts.vacationEntitlement,
+    currentTexts.vacationTaken,
+    currentTexts.vacationPlanned,
+    currentTexts.remainingVacation,
+  ];
+
   const [vacationData] = useState({
     total: 25,
     taken: 15,
@@ -15,7 +42,7 @@ function VacationCard() {
   const remaining = vacationData.total - (vacationData.taken + vacationData.planned);
 
   const data = {
-    labels: ["Urlaubsanspruch", "Urlaub genommen", "Urlaub geplant", "Resturlaub"],
+    labels: labels,
     datasets: [
       {
         data: [vacationData.total, vacationData.taken, vacationData.planned, remaining], 
@@ -26,19 +53,19 @@ function VacationCard() {
   };
 
   const handleOpenVacationOverview = () => {
-    alert("Urlaubsübersicht wird geöffnet.");
+    alert(language === "de" ? "Urlaubsübersicht wird geöffnet." : "Vacation overview is opening.");
   };
 
   return (
     <div className="card-vacation-card">
-      <h2>Urlaubsanspruch</h2>
-      <p>Gesamt: {vacationData.total} Tage</p>
-      <p>Genommen: {vacationData.taken} Tage</p>
-      <p>Geplant: {vacationData.planned} Tage</p>
-      <p>Resturlaub: {remaining} Tage</p>
+      <h2>{currentTexts.vacationEntitlement}</h2>
+      <p>{language === "de" ? "Gesamt" : "Total"}: {vacationData.total} {language === "de" ? "Tage" : "days"}</p>
+      <p>{currentTexts.vacationTaken}: {vacationData.taken} {language === "de" ? "Tage" : "days"}</p>
+      <p>{currentTexts.vacationPlanned}: {vacationData.planned} {language === "de" ? "Tage" : "days"}</p>
+      <p>{currentTexts.remainingVacation}: {remaining} {language === "de" ? "Tage" : "days"}</p>
       <Doughnut data={data} />
       <button onClick={handleOpenVacationOverview}>
-        <i className="ri-navigation-line"></i>Urlaubsübersicht öffnen
+        <i className="ri-navigation-line"></i>{language === "de" ? "Urlaubsübersicht öffnen" : "Open Vacation Overview"}
       </button>
     </div>
   );

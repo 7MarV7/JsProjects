@@ -1,0 +1,98 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.profile-image {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.profile-info p {
+  margin: 0;
+  color: gray;
+}
+
+.profile-details {
+  padding: 1rem;
+}
+
+.detail-item {
+  margin-bottom: 0.5rem;
+}
+
+.detail-item strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.profile-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 1rem; /* Space between items */
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.profile-action-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: gray;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.profile-action-button:hover {
+  color: blue;
+  transform: scale(1.05);
+}
+
+.profile-edit button {
+  font-size: 0.9rem;
+  background-color: var(--button-bg-color);
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.profile-edit button:hover {
+  transform: scale(1.1);
+}
+
+.profile-edit button svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .profile-actions {
+    grid-template-columns: 1fr; 
+  }
+}

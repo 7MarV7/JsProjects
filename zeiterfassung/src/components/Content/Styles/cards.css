@@ -1,0 +1,224 @@
+/*================================================================================================================================
+    File Name: card.css
+        Creator: Marvin S.
+        Date: 2021-09-30
+        Project: General Card Styling
+        Description: This is the general styling for all cards in the dashboard. It contains the styling for the card container, heading, paragraph, and button.
+        last update: 2021-10-01
+ ==================================================================================================================================*/
+
+/* Index 
+
+Row: | Name:
+
+     | Imports
+     | Root Variables
+     | Utility Classes
+     | Grid Layout
+     | Responsive Design
+     | General Styles
+     | Equal height for all cards
+     | Hover and Focus Effects
+     | Heading Styling
+     | Paragraph Styling 
+     | Button Styling for All Cards 
+     | 
+     |
+     | 
+     | 
+     |
+     | 
+     |
+     !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
+*/      
+
+ /*Imports */
+/*========>Root Variables<========*/
+:root {
+  --primary-color: #357ae8;
+  --secondary-color: #234479;
+  --text-color: #555;
+  --card-bg-color: #ffffff;
+  --hover-bg-color: #e6f7ff;
+  --active-bg-color: #ffbf00;
+  --heading-size: 1.8rem;
+  --text-size: 1rem;
+  --border-radius: 10px;
+  --gap: 20px;
+  --max-width: 1200px;
+  --button-bg-color: #357ae8;
+  --button-hover-bg: #234479;
+  --button-focus-outline: #84c0ff;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --hover-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*========>Utility Classes<========*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*========>Grid Layout<========*/
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  padding: var(--gap);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/*========>Responsive Design<========*/
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*========>General Styles<========*/
+
+.card-profile-card,
+.card-tasks-card,
+.card-vacation-card,
+.card-terminal-card,
+.card-time-card,
+.card-calendar-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--gap);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/*========>Hover and Focus Effects<========*/
+.card-profile-card:hover,
+.card-tasks-card:hover,
+.card-vacation-card:hover,
+.card-terminal-card:hover,
+.card-time-card:hover,
+.card-calendar-card:hover,
+.card-profile-card:focus,
+.card-tasks-card:focus,
+.card-vacation-card:focus,
+.card-terminal-card:focus,
+.card-time-card:focus,
+.card-calendar-card:focus {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-box-shadow);
+  outline: none;
+}
+
+.card-tasks-card button:hover,
+.card-vacation-card button:hover,
+.card-terminal-card button:hover,
+.card-time-card button:hover,
+.card-calendar-card button:hover,
+.card-tasks-card button:focus,
+.card-vacation-card button:focus,
+.card-terminal-card button:focus,
+.card-time-card button:focus,
+.card-calendar-card button:focus {
+  background-color: blue;
+  transform: scale(1.05);
+  outline: 2px solid var(--button-focus-outline);
+  outline-offset: 2px;
+}
+
+
+/*========>Heading Styling<========*/
+.card-tasks-card h2,
+.card-vacation-card h2,
+.card-terminal-card h2,
+.card-time-card h2,
+.card-calendar-card h2 {
+  font-size: var(--heading-size);
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+/*========>Paragraph Styling<========*/
+.card-profile-card p,
+.card-tasks-card p,
+.card-vacation-card p,
+.card-terminal-card p,
+.card-time-card p,
+.card-calendar-card p {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  margin: 5px 0;
+}
+
+/*========>Button Styling for All Cards<========*/
+.profile-edit-button button,
+.card-tasks-card button,
+.card-vacation-card button,
+.card-terminal-card button,
+.card-time-card button {
+  font-size: 0.9rem;
+  background-color: var(--button-bg-color); 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-tasks-card button:hover,
+.card-vacation-card button:hover,
+.card-terminal-card button:hover,
+.card-time-card button:hover,
+.profile-button button:hover {
+  background-color: var(--button-hover-bg); 
+  transform: scale(1.05);
+}
+
+
+.card-tasks-card button:focus,
+.card-vacation-card button:focus,
+.card-terminal-card button:focus,
+.card-time-card button:focus,
+.profile-button button:focus {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.20);
+}
+
+
+.card-tasks-card button:active,
+.card-vacation-card button:active,
+.card-terminal-card button:active,
+.card-time-card button:active,
+.profile-button button:active {
+  transform: scale(0.95); 
+}
+
+.card-profile-card h2,
+.card-tasks-card h2,
+.card-vacation-card h2,
+.card-terminal-card h2,
+.card-time-card h2,
+.card-calendar-card h2 {
+  font-size: 1.5rem;
+}
+

@@ -1,3 +1,44 @@
+/*================================================================================================================================
+    File Name: navigation.css
+        Creator: Marvin S.
+        Date: 2021-09-30
+        Project: Navigation Styling
+        Description:  This is the CSS file for the navigation component. It contains the styling for the navigation bar and its components.
+        last update: 2021-10-01
+ ==================================================================================================================================*/
+
+/* Index 
+
+Row: | Name:
+
+     | Imports
+     | 
+     | 
+     | 
+     | 
+     | 
+     | 
+     | 
+     | 
+     |
+     | 
+     | 
+     | 
+     |
+     | 
+     | 
+     |
+     | 
+     |
+    !!ATTENTION ROW NUMBER CHANCHES WHEN ADDING NEW ITEMS HERE OR BETWEEN THE ROWS!!
+*/      
+
+
+ /*Imports */
+
+
+/* Navigation Styling */
+
 .nav {
   display: flex;
   justify-content: flex-start;
