@@ -12,3 +12,4 @@ function ActivityTrafficLight() {
 }
 
 export default ActivityTrafficLight;
+
