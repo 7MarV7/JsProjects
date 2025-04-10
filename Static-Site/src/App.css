@@ -1,6 +1,7 @@
 /* Allgemeine Stile */
 html,
-body {
+body,
+header {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -35,7 +36,15 @@ a:hover {
 
 /* Header */
 header {
-  background: #007bff;
+  background: rgb(81, 73, 217);
+  background: linear-gradient(
+    10%,
+    rgba(81, 73, 217, 1) 0%,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(15, 48, 193, 1) 10%,
+    rgba(6, 68, 160, 1) 34%,
+    rgba(0, 212, 255, 1) 100%
+  );
   color: #fff;
   padding: 1rem 0;
   text-align: center;
