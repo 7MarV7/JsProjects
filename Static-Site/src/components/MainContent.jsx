@@ -1,8 +1,8 @@
-export function mainContent() {
+export function MainContent() {
   return (
-    <div>
+    <main>
       <h1>Hello, World!</h1>
       <p>This is a simple static site.</p>
-    </div>
+    </main>
   );
 }

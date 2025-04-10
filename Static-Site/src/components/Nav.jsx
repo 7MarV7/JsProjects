@@ -1,4 +1,4 @@
-export function nav() {
+export function Nav() {
   return (
     <nav>
       <a href="/">Home</a>
