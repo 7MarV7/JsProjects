@@ -7,21 +7,18 @@ export function MainContent() {
         <h1>Hello, World!</h1>
         <p>This is a simple static site.</p>
 
-        {}
-        <img
-          src={ReactLogo}
-          alt="React Logo"
-          style={{ width: '150px', height: '150px' }}
-        />
+        <div className="react-logo-container">
+          <img src={ReactLogo} alt="React Logo" className="react-logo" />
+        </div>
 
-        <a>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
           itaque ullam non deserunt voluptates repudiandae magni quia, quidem
           tempore quam cumque eum minima illum placeat iusto dolorum quas
           nesciunt, voluptatum labore exercitationem rem deleniti dolore quasi
           incidunt. Aliquid quae quisquam recusandae! Doloremque laborum
           blanditiis alias placeat itaque error numquam nobis.
-        </a>
+        </p>
 
         <p>It is built with React and Vite.</p>
         <p>Feel free to explore and modify it!</p>
