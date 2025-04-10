@@ -50,13 +50,32 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
+.header--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header p {
-  margin: 0.5rem 0 0;
+.header--text p {
+  padding-top: 20px;
+  margin: 5px;
+}
+
+header img {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin-left: 1.7rem;
+}
+
+header img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.header--logo {
+  display: flex;
+  width: 100%;
 }
 
 /* Navigation */

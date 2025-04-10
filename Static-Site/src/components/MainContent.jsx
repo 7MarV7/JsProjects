@@ -20,6 +20,42 @@ export function MainContent() {
           blanditiis alias placeat itaque error numquam nobis.
         </p>
 
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+          itaque ullam non deserunt voluptates repudiandae magni quia, quidem
+          tempore quam cumque eum minima illum placeat iusto dolorum quas
+          nesciunt, voluptatum labore exercitationem rem deleniti dolore quasi
+          incidunt. Aliquid quae quisquam recusandae! Doloremque laborum
+          blanditiis alias placeat itaque error numquam nobis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+          itaque ullam non deserunt voluptates repudiandae magni quia, quidem
+          tempore quam cumque eum minima illum placeat iusto dolorum quas
+          nesciunt, voluptatum labore exercitationem rem deleniti dolore quasi
+          incidunt. Aliquid quae quisquam recusandae! Doloremque laborum
+          blanditiis alias placeat itaque error numquam nobis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+          itaque ullam non deserunt voluptates repudiandae magni quia, quidem
+          tempore quam cumque eum minima illum placeat iusto dolorum quas
+          nesciunt, voluptatum labore exercitationem rem deleniti dolore quasi
+          incidunt. Aliquid quae quisquam recusandae! Doloremque laborum
+          blanditiis alias placeat itaque error numquam nobis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+          itaque ullam non deserunt voluptates repudiandae magni quia, quidem
+          tempore quam cumque eum minima illum placeat iusto dolorum quas
+          nesciunt, voluptatum labore exercitationem rem deleniti dolore quasi
+          incidunt. Aliquid quae quisquam recusandae! Doloremque laborum
+          blanditiis alias placeat itaque error numquam nobis.
+        </p>
+
         <p>It is built with React and Vite.</p>
         <p>Feel free to explore and modify it!</p>
       </main>
