@@ -18,3 +18,7 @@ function App() {
 export default App;
 
 //Comment to test git
+
+//Test comment to learn seperate  git commits
+
+//Bla Bla Bla
